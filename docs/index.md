@@ -1,0 +1,425 @@
+  <DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <script src="https://kit.fontawesome.com/52e3142fe2.js" crossorigin="anonymous"></script>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Lobster&family=Roboto&display=swap" rel="stylesheet">
+    <title>Scribler</title>
+    <base href="http://localhost:3000/">
+   <style>
+        
+        /* Mobile first design */
+        
+            html, body {
+                height: 100%;
+                background-color: white;
+                font-size: 1em;
+               /* background-image: url(https://miro.medium.com/max/10000/0*XBfvU6TPUxcBYcND); 
+                background-repeat: no-repeat;
+                background-size: cover; */ 
+            }
+             
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+		user-select: none;
+            }
+            
+            header {
+                height: 15%;
+                width: 100vw;
+                max-height: 90px;
+                background-color: white;
+                display: flex;
+                position: relative;
+                align-items: center;
+                justify-content: space-between;
+                padding-left: 5%;
+                min-height: 50px;
+                padding-right: 5%;
+            }
+            
+            .menu i {
+                position: relative;
+                font-size: 2em;
+                color: #FF3C00;
+            }
+
+            
+            .menu i::after {
+                position: absolute;
+                color: white;
+                font-size: 0.3em;
+                background: red;
+                text-align: center;
+                content: /*notifications*/;
+                transform: translate(calc(-15px/2),calc(calc(-15px/2)));
+                line-height: 15px;
+                width: 15px;
+                height: 15px;
+                border: 3px solid white;
+                border-radius: 15px;
+            }
+
+            p, h1, h2, footer, button {
+              font-family: 'Roboto', sans-serif;
+            }
+            
+	    .logo {
+                color: #FF3C00;
+                font-size: 2em;
+                font-family: 'Lobster', cursive;
+            }
+            
+            .info {
+            /* width: calc(100vw - 10%);
+                padding-left: 5%;
+                box-sizing: content-box;
+                padding-right: 5%;
+                padding-top: 10%;
+                padding-bottom: 40%; */
+                background-image: url(https://miro.medium.com/max/10000/0*XBfvU6TPUxcBYcND); 
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center center;
+                /* text-align: center;
+                display: grid;
+                grid-template-rows: auto auto auto;
+                color: white;
+                grid-row-gap: 20%;
+                overflow: hidden; */
+            }
+            
+            .heading {
+                font-size: 7vw;
+                z-index: 1;
+            }
+            
+            .intro {
+                font-size: calc(4vw + 3px);
+                z-index: 1;
+            }
+            
+            .buttons {
+                height: 100%;
+                min-height: 40px;
+                width: auto;
+                display: flex;
+                justify-content: space-around;
+                z-index: 1;
+                flex-wrap: wrap;
+            }
+            
+            .btn {
+                width: 30%;
+                height: 100%;
+                border-radius: 25px;
+                border: none;
+                background: #FF3C00;
+                color: white;
+                font-size: 1em;
+            }
+            
+            footer {
+               width: 100vw;
+               height: 25%;
+               position: relative;
+               padding-left: 5%;
+               padding-right 5%;
+               min-height: 50px;
+               top: 20%;
+               text-align: center;
+               background-color: #333333;
+            }
+            
+            .copyright {
+                width: auto;
+                height: 20%;
+                text-align: center;
+                position: relative;
+                color: white;
+                top: 40%;
+            }
+            
+            .features {
+                box-sizing: content-box;
+                padding-top: 20%;
+                padding-left: 5%;
+                padding-right: 5%;
+                background-color: white;
+                padding-bottom: 10%;
+                display: grid;
+                flex-wrap: wrap;
+                grid-gap: 2%;
+            }
+            
+            .box {
+                min-width: 150px;
+                width: 70%;
+                text-align: center;
+                height: 100%;
+                min-height: 200px;
+                box-sizing: content-box;
+                margin: auto; /**/
+                position: relative;
+                padding: 5%;
+            }
+            
+            .box i {
+                font-size: 15vw; /* 30vw */
+                height: 40%; /* 50% */
+                width: 80%;
+                margin: auto;
+                border-bottom: 1px solid #c6c6c6;
+                color: #c6c6c6;
+            }
+            
+            .box p {
+                height: 50%;
+                font-size: 3vw; /* 5vw */
+                margin-top: 10%;
+                color: #c6c6c6;
+            }
+            
+            .filter {
+                  width: calc(100vw - 10%);
+                padding-left: 5%;
+                box-sizing: content-box;
+                padding-right: 5%;
+                padding-top: 10%;
+                padding-bottom: 40%;
+                background-color: rgba(0,0,0,0.5);
+                   text-align: center;
+                display: grid;
+                grid-template-rows: auto auto auto;
+                color: white;
+                grid-row-gap: 20%;
+                overflow: hidden;
+            }
+
+	    .menu {
+            display: flex;
+	    flex-direction: row;
+	    align-items: center;
+	    justify-content: flex-end;
+	    width: 10%;
+	    }
+
+	    #username {
+            color: #E1E1E1;
+	    font-size: 80%;
+	    white-space: nowrap;
+	    text-overflow: ellipse;
+	    margin-right: 50%;
+	    }
+            
+            #dropdown {
+             position: absolute;
+             width: 150px;
+             z-index: 3;
+             box-sizing: content-box;
+             padding-top: 25px;
+             padding-bottom: 25px;
+             display: none;
+             top: 1.5em;
+             display: grid;
+             right: 0;
+             opacity: 0;
+             transition: opacity 0.2s ease;
+             background: white;
+             box-shadow: 0px 0px 5px gray;
+            } 
+
+	    .logged-in {
+             height: 200px;
+	     grid-template-rows: 20% 20% 20% 20% 20%;
+	    }
+
+	    .logged-out {
+             height: 120px;
+	     grid-template-rows: 20% 20% 20%;
+            }
+            
+            nav a {
+                text-align: center;
+                height: 40px;
+                padding: 8%;
+                margin: auto;
+                text-decoration: none;
+                color: #FF3C00;
+                user-select: none;
+                font-family: 'Roboto', sans-serif;
+                display: block;
+                font-size: 50%;
+            }
+
+            /* Tablets */
+            
+            @media only screen and (min-width: 481px) and (max-width: 768px) {
+                /* 
+                .box {
+                    width: 70%;
+                    margin: auto;
+                }
+                
+                .box i {
+                    font-size: 20vw;
+                }
+                .box p {
+                    font-size: 3vw; 
+                }
+                
+                .intro {
+                    font-size: 3vw;
+                } */
+                
+                  .box {
+                    min-width: 100px;
+                    max-width: 150px;
+                    height: 100%;
+                    padding: 0;
+                }
+                
+                .box i {
+                    box-sizing: content-box;
+                    height: 40%;
+                    font-size: 8vw;
+                    padding: 2%;
+                }
+                
+                .box p {
+                    font-size: 2vw;
+                }
+                
+                .intro {
+                    font-size: 3vw;
+                }
+                
+                .filter {
+                    padding-bottom: 30%;
+                    grid-row-gap: 30%;
+                }
+                
+                footer {
+                    top: 30%;
+                }
+                
+                .features {
+                    grid-template-rows: none;
+                    grid-template-columns: auto auto auto;
+                    padding-top: 10%;
+                    padding-bottom: 5%;
+                }
+                
+            }
+            
+            /* Small screens and laptops */
+            
+            @media only screen and (min-width: 769px) and (max-width: 1024px) {
+                
+                .box {
+                    height: 50%;
+                }
+                
+                .box i {
+                    box-sizing: content-box;
+                    font-size: 10vw;
+                    height: 50%;
+                    padding: 5%;
+                }
+                
+                .box p {
+                    font-size: 1.5vw;
+                }
+                
+                .intro {
+                    font-size: 2vw;
+                }
+                
+                .filter {
+                    padding-bottom: 20%;
+                    grid-row-gap: 30%;
+                }
+                
+                footer {
+                    top: 30%;
+                }
+                
+                .features {
+                    grid-template-rows: none;
+                    grid-template-columns: auto auto auto;
+                    grid-gap: 5%;
+                    padding-top: 10%;
+                    padding-bottom: 5%;
+                }
+
+            }
+            
+            /* Desktops and large screens */
+            
+            @media only screen and (min-width: 1025px) and (max-width: 1200px) {
+                
+            }
+            
+            /* Extra large screens */ 
+            
+            @media only screen and (min-width: 1201px) {
+                
+            }
+            
+        
+     </style>
+    </head>
+    <body>
+        <header>
+		<h1 class="logo" onclick="location.href='http://localhost:3000'"><i>Scribler</i></h1>
+            <div class="menu">
+		    <p id="username">{username}</p>
+            <i class="fas fa-bars" id="menu">
+		    <nav id="dropdown" class="{logged}">
+                    <a href="" id="home">Home</a>
+                    <a href="#" id="about">About</a>
+                    <a href="#" id="contact">Contact</a>
+		    <a href="users/dashboard/docs" id="dashboard">{dashboard}</a>
+		    <a href="" id="logout">{logout}</a>
+                </nav>
+            </i>
+          </div>
+        </header>
+        <main>
+            <article class="info">
+                <div class="filter">
+            <h1 class="heading">Create Something <em>Bold</em></h1>
+            <p class="intro">We provide a reliable platform for you to express your thoughts, feelings and ideas throught writing! Scribler is a cloud based service that you can use to create and save your text files all in one place! Get started by creating an account or logging into an existing account!</p>
+            <div class="buttons">
+                <button onclick="location.href='http://localhost:3000/signup'"  class="btn signup" href="signup">Sign up</button>
+                <button onclick="location.href='http://localhost:3000/login'"  class="btn login" href="login">Login</button>
+            </div>
+            </div>
+            </article>
+            <section class="features">
+			<article class="box create">
+                    <i class="fas fa-pencil-alt"></i>
+                   <!-- <h2>Create</h2> -->
+                    <p>Let our platform be your canvas! Here you can deposit whatever you like weather its for school, work or personal use!</p>
+                </article>
+                <article class="box share">
+                    <i class="fas fa-users"></i>
+                    <!-- <h2>Share</h2> -->
+                    <p>We give you the chance to share your work and ideas with others, as well as collaborate and contribute to different projects!</p>
+                </article>
+                <article class="box express">
+                    <i class="fas fa-brain"></i>
+                    <!-- <h2>Express</h2> -->
+                    <p>Let this be the place for you to store your ideas all in one convenient and easily accessable place!</p>
+                </article>
+            </section>
+        </main>
+     <footer>
+           <p class="copyright">&#169 Copyright 2020 Scribler Inc</p>
+   </footer> 
+	<script src="app.js"></script>
+    </body>
+</html> 
