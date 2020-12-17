@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+          <script src="https://kit.fontawesome.com/52e3142fe2.js" crossorigin="anonymous"></script>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Lobster&family=Roboto&display=swap" rel="stylesheet">
+     <title>Scribler | Dashboard</title>
+     <base href="http://localhost:3000/">
+        <style>
+        
+        /* Mobile first design */
+        
+            html, body {
+                height: 100%;
+                background-color: white;
+                font-size: 1em;
+               /* background-image: url(https://miro.medium.com/max/10000/0*XBfvU6TPUxcBYcND);
+                background-repeat: no-repeat;
+                background-size: cover; */ 
+            }
+             
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+		user-select: none;
+            }
+            
+            header:not(.board) {
+                height: 15%;
+                width: 100vw;
+                max-height: 90px;
+                background-color: white;
+                display: flex;
+                position: relative;
+                align-items: center;
+                justify-content: space-between;
+                z-index: 1;
+                padding-left: 5%;
+                border-bottom: 1px solid #E1E1E1;
+                min-height: 50px;
+                padding-right: 5%;
+            }
+            
+            .menu i {
+                position: relative;
+                font-size: 2em;
+                color: #FF3C00;
+            }
+            
+            p, h1, h2, footer, button {
+              font-family: 'Roboto', sans-serif;
+            }
+            
+            .logo {
+                color: #FF3C00;             
+                font-size: 2em;
+                font-family: 'Lobster', cursive;
+            }                                                                                 
+            
+            .intro {
+                font-size: calc(4vw + 3px);
+                z-index: 1;
+            }
+            
+            .buttons {
+                height: 100%;
+                min-height: 40px;
+                width: auto;
+                display: flex;
+                justify-content: space-around;
+                z-index: 1;
+                flex-wrap: wrap;
+            }
+            
+            .btn {
+                width: 30%;
+                height: 100%;
+                border-radius: 25px;
+                border: none;
+                background: #FF3C00;
+                color: white;
+                font-size: 1em;
+            }
+            
+            footer {
+               width: 100vw;
+               height: 25%;
+               position: relative;
+               padding-left: 5%;
+               padding-right 5%;
+               min-height: 50px;
+               text-align: center;
+               background-color: #333333;
+            }
+            
+            .copyright {
+                width: auto;
+                height: 20%;
+                text-align: center;
+                position: relative;
+                color: white;
+                top: 40%;
+            }
+            
+            main {
+                z-index: 0;
+            }
+            
+            #dropdown {
+             position: absolute;
+             width: 150px;
+             z-index: 3;
+             box-sizing: content-box;
+             height: 200px;
+             padding-top: 25px;
+             padding-bottom: 25px;
+             display: none;
+             top: 1.5em;
+             display: grid;
+             grid-template-rows: 20% 20% 20% 20% 20%;
+             right: 0;
+             opacity: 0;
+             transition: opacity 0.2s ease;
+             background: white;
+             box-shadow: 0px 0px 5px #c6c6c6;
+            } 
+            
+            nav a {
+                text-align: center;
+                height: 40px;
+                padding: 8%;
+                margin: auto;
+                text-decoration: none;
+                color: #FF3C00;
+                user-select: none;
+                font-family: 'Roboto', sans-serif;
+                display: block;
+                font-size: 50%;
+            }
+            
+            .content {
+		       min-height: 100%;
+                width: 100%;
+            }
+
+	    .menu {
+            display: flex;                                                                                                                                                 flex-direction: row;
+            align-items: center;                                                                                                                                           justify-content: flex-end;                                                                                                                                     width: 10%;                                                                                                                                                    }
+
+            #username {
+            color: #E1E1E1;                                                                                                                                                font-size: 80%;                                                                                                                                                white-space: nowrap;                                                                                                                                           text-overflow: ellipse;                                                                                                                                        margin-right: 50%;                                                                                                                                             }
+            
+            .dashboard {
+	        display: flex;
+		min-height: 100%;
+                width: 100%;
+                align-items: center;
+                flex-direction: column;
+		padding-top: 5%;
+		padding-bottom: 10%;
+            }
+            
+            .board {
+                position: relative;
+                width: 100%;
+                height: 10vmin;
+                display: flex;
+                align-items: center;
+                box-shadow: 0px 0px 5px #c6c6c6;
+                color: #FF3C00;
+                font-family: 'Roboto', sans-serif;
+                justify-content: space-around;
+                background: white;
+                min-height: 30px;
+            }
+            
+            .tab {
+                height: 100%;
+                display: flex;
+                align-items: center;
+            }
+
+	    .tab a {
+              text-decoration: none;
+	      color: #FF3C00;
+	    }
+            
+            .tab-recent {
+                border-bottom: 5px solid #FF3C00;
+            }
+
+	    #activity {
+                 height: 100%;
+		 min-height: 400px;
+                 width: 100%;
+		 padding-left: 5%;
+		 padding-right: 5%;
+	    }
+
+	    #activity h1 {
+                font-size: 2em;
+	    } 
+
+	    #activity-top {
+              width: 100%;
+	      height: 10%;
+	      max-height: 50px;
+	      text-align: left;
+	      min-height: 50px;
+	      max-height: 60px;
+	      border-bottom: 1px solid #E1E1E1;
+              color: gray;
+	      display: flex;
+	      align-items: center;
+	    }
+
+	    #activity-top {
+	       justify-content: space-between;
+	       flex-direction: row;
+	    }
+
+	    .no-activity {
+              color: #c6c6c6;
+	      position: relative;
+	      text-align: center;
+	      height: 350px;
+	      line-height: 350px;
+            }
+
+	    .notif {
+               width: 100%;
+	       height: 100%;
+	       max-height: 100px;
+	       display: flex;
+	       align-items: center;
+	       flex-direction: column;
+	       font-family: 'Roboto', sans-serif;
+	       color: #c6c6c6;
+	       padding: 2%;
+	    }
+
+            /* Tablets */
+            
+            @media only screen and (min-width: 481px) and (max-width: 768px) {
+       
+            }
+            
+            /* Small screens and laptops */
+            
+            @media only screen and (min-width: 769px) and (max-width: 1024px) {
+                
+          
+            }
+            
+            /* Desktops and large screens */
+            
+            @media only screen and (min-width: 1025px) and (max-width: 1200px) {
+                
+            }
+            
+            /* Extra large screens */ 
+            
+            @media only screen and (min-width: 1201px) {
+                
+            }
+            
+        
+        </style>
+    </head>
+    <body>
+        <header>
+		<h1 class="logo" onclick="location.href='http://localhost:3000'"><i>Scribler</i></h1>
+            <div class="menu">
+		    <p id="username">{username}</p>
+            <i class="fas fa-bars" id="menu">
+                <nav id="dropdown">
+                    <a href="" id="home">Home</a>
+                    <a href="#" id="about">About</a>
+                    <a href="#" id="contact">Contact</a>
+		    <a href="users/dashboard/docs" id="dashboard">Dashboard</a>
+		    <a href="users/logout" id="logout">Logout</a>
+                </nav>
+            </i>
+            </div>
+        </header>
+        <div class="content">
+          <header class="board">
+              <div class="tab tab-new">
+		      <a class="new" href="users/dashboard/new">New</a>
+                </div>
+                <div class="tab tab-docs">
+			<a class="docs" href="users/dashboard/docs">Docs</a>
+                </div>
+                <div class="tab tab-friends">
+			<a class="friends" href="users/dashboard/friends">Friends</a>
+                </div>
+		<div class="tab tab-recent">
+			<a class="recent" href="users/dashboard/recent">Recent</a>
+			</a>
+            </header>
+            <section class="dashboard">
+		    <div id="activity">
+			    <div id="activity-top">                                                                                                                                                <h1>Recent</h1>
+			    </div>
+				    <p class="no-activity">No recent activity!</p>                                                                                                                 </div>
+                    </div>
+            </section>
+            <footer>                                                                                                                                                          <p class="copyright">&#169 Copyright 2020 Scribler Inc</p>
+        </footer>
+	</div>
+	<script>
+		const activity = {activity};
+            const cont = document.querySelector("#activity");
+
+   
+if (activity.length > 0) {
+            cont.style.display = "grid";
+            cont.style.gridTemplateColumns = "100%";
+            cont.style.gridAutoRows = "20vmin";
+            cont.style.gridRowGap = "5vmin";
+
+		   document.querySelector(".no-activity").style.display = "none";
+		   for (let x of activity.reverse()) {
+			   let notif = document.createElement("div");
+			   let info = document.createElement("p");
+			   let type;
+			     switch (x.type) {
+                               case "friend request": type = "fr";
+		               info.innerHTML = "<b>" + x.info.from + "</b> sent you a friend request";
+		               break;
+		               case "sent document": type = "sd";
+			       info.innerHTML = "<b>" + x.info.from + "</b> sent you a document";
+			       break;
+			       case "accepted friend request": type = "afr";
+			       info.innerHTML = "<b>" + x.info.from + "</b> accepted your friend request";
+			       break;
+		               case "removed friend": type = "rmf";
+		               info.innerHTML = "<b>" + x.info.from + "</b> removed you as a friend";
+		               break;
+			       case "rejected friend request": type = "rfr";
+			       info.innerHTML = "<b>" + x.info.from + "</b> rejected your friend request";
+			     }
+			   notif.appendChild(info);
+                         notif.setAttribute("class","notif " + type);
+			 cont.appendChild(notif);
+		   }
+	   }
+	</script>
+	<script src="app.js"></script>
+    </body>
+</html>

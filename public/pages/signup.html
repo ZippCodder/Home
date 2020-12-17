@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <script src="https://kit.fontawesome.com/52e3142fe2.js" crossorigin="anonymous"></script>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Lobster&family=Roboto&display=swap" rel="stylesheet">
+    <title>Scribler | Sign Up</title>
+    <base href="http://localhost:3000/">
+        <style>
+        
+        /* Mobile first design */
+        
+            html, body {
+                height: 100%;
+                background-color: white;
+                font-size: 1em;
+              /*    background-image: url(https://miro.medium.com/max/10000/0*XBfvU6TPUxcBYcND);
+                background-repeat: no-repeat;
+                background-size: cover; */
+            }
+             
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+		user-select: none;
+            }
+            
+            header {
+                height: 15%;
+                width: 100vw;
+                max-height: 90px;
+                background-color: white;
+                display: flex;
+                position: relative;
+                align-items: center;
+                justify-content: space-between;
+                padding-left: 5%;
+                box-shadow: 0px 0px 5px #c6c6c6;
+                padding-right: 5%;
+                min-height: 50px;
+            }
+            
+            .menu i {
+                position: relative;
+                font-size: 2em;
+                color: #FF3C00;
+            }
+
+
+            .menu i::after {
+                position: absolute;
+                color: white;
+                font-size: 0.3em;
+                background: red;
+                text-align: center;
+                content: /*notifications*/;
+                transform: translate(calc(-15px/2),calc(calc(-15px/2)));
+                line-height: 15px;
+                width: 15px;
+                height: 15px;
+                border: 3px solid white;
+                border-radius: 15px;
+            }
+            
+            p, h1, h2, footer, button {
+              font-family: 'Roboto', sans-serif;
+            }
+            
+            .logo {                   
+	    color: #FF3C00;                                                   
+	    font-size: 2em;                            
+            font-family: 'Lobster', cursive;
+            }                                                                                 
+
+            footer {
+               width: 100vw;
+               height: 25%;
+               position: relative;
+               padding-left: 5%;
+               min-height: 50px;
+               padding-right 5%;
+               top: 30%;
+               text-align: center;
+               background-color: #333333;
+            }
+            
+            .copyright {
+                width: auto;
+                height: 20%;
+                text-align: center;
+                position: relative;
+                color: white;
+                top: 40%;
+            }
+            
+        .menu {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-end;
+            width: 10%;
+            }
+
+            #username {
+            color: #E1E1E1;
+            font-size: 80%;
+            white-space: nowrap;
+            text-overflow: ellipse;
+            margin-right: 50%;
+            }
+
+            #dropdown {
+             position: absolute;
+             width: 150px;
+             z-index: 3;
+             box-sizing: content-box;
+             padding-top: 25px;
+             padding-bottom: 25px;
+             display: none;
+             top: 1.5em;
+             display: grid;
+             right: 0;
+             opacity: 0;
+             transition: opacity 0.2s ease;
+             background: white;
+             box-shadow: 0px 0px 5px #c6c6c6;
+            }
+
+            .logged-in {
+             height: 200px;
+             grid-template-rows: 20% 20% 20% 20% 20%;
+            }
+
+            .logged-out {
+             height: 120px;
+             grid-template-rows: 20% 20% 20%;
+            }
+            
+            nav a {
+                text-align: center;
+                height: 40px;
+                padding: 8%;
+                margin: auto;
+                text-decoration: none;
+                color: #FF3C00;
+                user-select: none;
+                font-family: 'Roboto', sans-serif;
+                display: block;
+                font-size: 50%;
+            }
+            
+            main {
+                height: 100%;
+                min-height: 500px;
+                box-sizing: content-box;
+                padding-top: 10%;
+                padding-bottom: 10%;
+            }
+            
+            .container {
+                width: auto;
+                position: relative;
+                box-sizing: content-box;
+                height: 100%;
+                text-align: center;
+            }
+            
+            .heading {
+              color: black;
+            }
+            
+            form {
+                display: flex;
+                margin: auto;
+                flex-direction: column;
+                grid-template-rows: auto auto auto auto auto;
+                height: 100%;
+                max-width: 500px;
+                max-height: 400px;
+            }
+            
+            form input {
+                height: 10%;
+                width: 60%;
+                border: 1px solid #c6c6c6;
+                color: #c6c6c6;
+                margin: auto;
+                margin-bottom: 1vh;
+                padding-left: 10px;
+                max-height: 50px;
+            }
+            
+            button {
+            background: #FF3C00;
+            color: white;
+            border: none;
+            margin: auto;
+            width: 50%;
+            height: 10%;
+            border-radius: 25px;
+            font-family: 'Lobster', cursive;
+            }
+            
+            .container a {
+                color: #FF3C00;
+                font-family: 'Roboto', sans-serif;
+                text-decoration: underline;
+            }
+            
+              #err {
+               color: red;
+               font-family: 'Roboto', sans-serif;
+            }
+            
+            /* Tablets */
+            
+            @media only screen and (min-width: 481px) and (max-width: 768px) {
+                /* form input {
+                    height: 20%;
+                    width: 50%;
+                }
+                
+                form button {
+                    height: 20%;
+                    width: 30%;
+                } */
+                
+                
+            }
+            
+            /* Small screens and laptops */
+            
+            @media only screen and (min-width: 769px) and (max-width: 1024px) {
+                main {
+                    padding-top: 10%;
+                }
+                
+                form input {
+                    margin-bottom: 1vh;
+                }
+                
+                form {
+                    max-width: 800px;
+                    width: 100%;
+                }
+            }
+            
+            /* Desktops and large screens */
+            
+            @media only screen and (min-width: 1025px) and (max-width: 1200px) {
+                
+            }
+            
+            /* Extra large screens */ 
+            
+            @media only screen and (min-width: 1201px) {
+                
+            }
+            
+        
+        </style>
+    </head>
+    <body>
+        <header>
+		<h1 class="logo" onclick="location.href='http://localhost:3000'"><i>Scribler</i></h1>
+            <div class="menu">
+		    <p id="username">{username}</p>
+            <i class="fas fa-bars" id="menu">
+		    <nav id="dropdown" class="{logged}">
+                    <a href="" id="home">Home</a>
+                    <a href="#" id="about">About</a>
+                    <a href="#" id="contact">Contact</a>
+		    <a href="users/dashboard/docs" id="dashboard">{dashboard}</a>
+		    <a href="" id="logout">{logout}</a>
+                </nav>
+            </i>
+            </div>
+        </header>
+        <main>
+            <div class="container">
+                <i><h1 class="heading">Sign Up</h1></i>
+                <br>
+                <i><a href="login" >Login</a></i>
+                <br>
+                <br>
+                <p id="err"><!--err--></p>
+         <form method="POST" action="http://localhost:3000/users/create">
+             <input type="text" name="username" placeholder="Name..." required>
+             <input type="text"name="email" placeholder="Email..." required>
+             <input type="password" name="password" placeholder="Password..." minLength="8" required>
+             <input  type="password" name="password-re" placeholder="Password..." required>
+             <button type="submit">Submit</button>
+         </form>
+         </div>
+        </main>
+        <footer>
+           <p class="copyright">&#169 Copyright 2020 Scribler Inc</p>
+        </footer>
+	<script src="app.js"></script>
+    </body>
+</html>
