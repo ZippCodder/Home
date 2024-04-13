@@ -1,0 +1,12 @@
+
+.notif {
+ width: 100%; 
+ padding-left: 5%; 
+ padding-right: 5%;
+ padding-top: 1em; 
+ padding-bottom: 1em; 
+}
+
+.notif p {
+ color: gray;
+}

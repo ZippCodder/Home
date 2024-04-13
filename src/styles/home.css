@@ -1,0 +1,274 @@
+
+#username {
+  background: none;
+  color: white;  
+}
+
+.info {
+  background-image: url(https://miro.medium.com/max/10000/0*XBfvU6TPUxcBYcND);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  min-height: 100vh;
+}
+
+.heading {
+  font-size: 12vmin;
+  z-index: 1;
+  text-align: center;
+}
+
+.intro {
+  font-size: calc(4vmin + 3px);
+  z-index: 1;
+  text-align: center; 
+  margin-top: 3em; 
+}
+
+.buttons {
+  height: min-content;
+  min-height: 40px;
+  width: auto;
+  display: flex;
+  justify-content: space-around;
+  z-index: 1;
+  flex-wrap: wrap;
+  margin-top: 3em;   
+}
+ 
+.buttons button {
+  box-shadow: 0px 0px 5px black; 
+}
+
+.features {
+  background-color: white;
+  display: grid;
+  flex-wrap: wrap;
+  border: 2px solid #c6c6c6;
+  border-radius: 5px;
+  margin: 2em;
+  align-items: center;
+  justify-items: center;
+  padding-top: 10%;
+  padding-bottom: 10%;
+  box-shadow: 0px 0px 10px black; 
+}
+
+.quote {
+  margin: 2em;
+  display: block;
+  padding-top: 10%;
+  padding-bottom: 10%;
+  box-sizing: content-box;
+  color: gray;
+  text-align: center;
+  margin: auto;
+  background: radial-gradient(#c6c6c6, white, white);
+}
+
+.quote__text {
+  width: 50%;
+  display: block;
+  margin: auto;
+}
+
+.box {
+  min-width: 150px;
+  width: 70%;
+  min-height: 100%;
+  text-align: center;
+  position: relative;
+  padding: 5%;
+}
+
+.box i {
+  height: 40%;
+  width: 80%;
+  margin: auto;
+  border-bottom: 1px solid #c6c6c6;
+  color: gray;
+  padding-bottom: 0.2em;
+  font-size: 3em; 
+}
+
+.box p {
+  height: 50%;
+  margin-top: 10%;
+  font-size: 80%;
+  color: #c6c6c6;
+}
+
+.get-started {
+  box-sizing: content-box;
+  background-color: white;
+  display: grid;
+  flex-wrap: wrap;
+  border: 2px solid #c6c6c6;
+  border-radius: 5px;
+  margin: 2em;
+  align-items: center;
+  justify-items: center;
+  height: min-content;
+  padding-top: 10%;
+  padding-bottom: 10%;
+  padding-left: 5%; 
+  padding-right: 5%;
+  text-align: center; 
+  font-family: "Roboto", sans-serif;
+  box-shadow: 0px 0px 10px black; 
+}
+
+.get-started__content {
+ color: gray; 
+}
+
+.content__title {
+ font-size: 2em;
+ color: gray;  
+ border-bottom: 1px solid #c6c6c6; 
+}
+
+.content__paragraph {
+ margin-top: 3em; 
+ font-size: 80%; 
+}
+
+.content__get-started {
+ display: block; 
+ margin: auto;
+ margin-top: 3em;  
+ width: 50%;  
+} 
+
+.filter {
+  width: 100%;
+  box-sizing: border-box;
+  background: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  color: white;
+  overflow: hidden;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column; 
+  padding-bottom: 10%;
+  padding-top: 10%;
+  padding-left: 10%; 
+  padding-right: 10%; 
+  justify-content: center;
+}
+
+#dropdown[class="logged-out"] .dropdown__dashboard, #dropdown[class="logged-out"] .dropdown__logout {
+ display: none; 
+}
+
+@media only screen and (min-width: 480px) {
+  .box i {
+    box-sizing: content-box;
+    height: 40%;
+    padding: 2%;
+    font-size: 4em;  
+  }
+
+  .box p, .content__paragraph {
+    font-size: 100%; 
+  }
+
+  .heading {
+   font-size: 8vmin;
+   z-index: 1;
+  }
+
+ .intro {
+   font-size: calc(2vmin + 3px);
+   z-index: 1;
+  }
+}
+
+/* Tablets */
+
+@media only screen and (min-width: 620px) and (max-width: 1024px) {
+  .box {
+    min-width: 100px;
+    max-width: 150px;
+    height: 100%;
+    padding: 0;
+  }
+
+  .features {
+    grid-template-rows: none;
+    grid-template-columns: auto auto auto;
+  }
+}
+
+/* Desktops and large screens */
+
+@media only screen and (min-width: 900px) {
+ .features, .get-started {
+  width: 80%; 
+  margin: auto;
+  box-sizing: border-box;
+  margin-top: 2em;   
+ } 
+}
+
+/* Extra large screens */
+
+@media only screen and (min-width: 1000px) {
+
+  .filter {
+   padding-left: 15%; 
+   padding-right: 15%; 
+  }
+  
+  .heading {
+   font-size: 10vmin;
+   z-index: 1;
+  }
+
+ .intro {
+   font-size: calc(2vmin + 3px);
+   z-index: 1;
+  }
+
+  .buttons {
+   margin-top: 3em; 
+  }
+
+  .features {
+    grid-template-rows: none;
+    grid-template-columns: auto auto auto;
+    width: 100%; 
+    height: 100%;
+    margin: 0;  
+  }
+
+  .get-started {
+    width: 100%; 
+    height: 100%;
+    margin: 0; 
+  }
+
+  .content-container {
+    display: grid; 
+    flex-wrap: nowrap;
+    grid-gap: 2em; 
+    grid-template-columns: 2fr 1fr;
+    padding: 2em; 
+    padding-left: 5%; 
+    padding-right: 5%;   
+    justify-content: center; 
+  }
+
+  .quote {
+    padding-top: 5%; 
+    padding-bottom: 5%;     
+    width: 90%; 
+    border-bottom: 4px solid #c6c6c6;
+  }
+}
+
+@media only screen and (min-width: 1300px) {
+ .content-container {
+   grid-template-columns: 1fr 1fr;
+ }  
+}

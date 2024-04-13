@@ -2,11 +2,14 @@
 
 // Dependencies...
 
+require("dotenv").config();
+
 const http = require("http");
 const url = require("url");
 const util = require("util");
 const debug = util.debuglog;
 const handlers = require("./lib/handlers");
+const uri = process.env.MONGO_URI;
 
 // Starting server...
 

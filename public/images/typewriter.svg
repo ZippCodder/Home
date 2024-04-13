@@ -1,0 +1,95 @@
+<svg width="250" height="250" xmlns="http://www.w3.org/2000/svg">
+  <!-- base peice -->
+ <g transform="translate(-26,-43)">
+  <rect x="73" y="237" width="154" height="20" fill="#333333" ry="9" />
+  <rect x="73" y="234" width="154" height="20" fill="gray" ry="9" />
+  <rect x="78" y="234" width="144" height="17" fill="white" ry="9" />
+  <rect x="75" y="180" width="150" height="70" fill="#fe470e" ry="8" />
+  <rect x="75" y="180" width="150" height="55" fill="#fe7b53" ry="8" />
+  <rect x="95" y="195" width="110" height="35" fill="#333333" ry="3" />
+  <rect x="110" y="225" width="80" height="15" fill="#333333" ry="3" />
+  <rect x="95" y="195" width="110" height="22" fill="#222222" ry="3" />
+
+  <rect x="80" y="165" width="140" height="5" fill="gray" ry="3" />
+  <rect x="90" y="150" width="120" height="40" fill="#fe7b53" ry="6" />
+  <rect x="90" y="180" width="120" height="10" fill="#fe470e" ry="2" />
+  <rect x="75" y="160" width="10" height="15" fill="#222222" ry="3" />
+  <rect x="215" y="160" width="10" height="15" fill="#222222" ry="3" />
+  <rect x="85" y="155" width="130" height="8" fill="#333333" ry="1" />
+  <rect x="105" y="160" width="90" height="15" fill="#333333" ry="3" />
+  <rect x="110" y="82" width="80" height="90" fill="white" ry="2" />
+  <rect x="85" y="165" width="130" height="3" fill="gray" ry="3" />
+  <rect x="138" y="182" width="25" height="5" fill="#BBBBBB" ry="0" />
+
+  <!-- keys -->
+  <rect x="115" y="228" width="70" height="9" fill="#ebd79b" ry="2" />
+  <rect x="116" y="228" width="68" height="6" fill="#f7efd7" ry="2" />
+
+  <g transform="translate(0, 0)">
+    <rect x="96" y="216" width="9" height="9" fill="#ebd79b" ry="2" />
+    <rect x="97" y="216" width="7" height="6" fill="#f7efd7" ry="2" />
+    <rect x="107" y="216" width="9" height="9" fill="#ebd79b" ry="2" />
+    <rect x="108" y="216" width="7" height="6" fill="#f7efd7" ry="2" />
+    <rect x="118" y="216" width="9" height="9" fill="#ebd79b" ry="2" />
+    <rect x="119" y="216" width="7" height="6" fill="#f7efd7" ry="2" />
+    <rect x="129" y="216" width="9" height="9" fill="#ebd79b" ry="2" />
+    <rect x="130" y="216" width="7" height="6" fill="#f7efd7" ry="2" />
+    <rect x="140" y="216" width="9" height="9" fill="#ebd79b" ry="2" />
+    <rect x="141" y="216" width="7" height="6" fill="#f7efd7" ry="2" />
+    <rect x="151" y="216" width="9" height="9" fill="#ebd79b" ry="2" />
+    <rect x="152" y="216" width="7" height="6" fill="#f7efd7" ry="2" />
+    <rect x="162" y="216" width="9" height="9" fill="#ebd79b" ry="2" />
+    <rect x="163" y="216" width="7" height="6" fill="#f7efd7" ry="2" />
+    <rect x="173" y="216" width="9" height="9" fill="#ebd79b" ry="2" />
+    <rect x="174" y="216" width="7" height="6" fill="#f7efd7" ry="2" />
+    <rect x="184" y="216" width="9" height="9" fill="#ebd79b" ry="2" />
+    <rect x="185" y="216" width="7" height="6" fill="#f7efd7" ry="2" />
+    <rect x="195" y="216" width="9" height="9" fill="#ebd79b" ry="2" />
+    <rect x="196" y="216" width="7" height="6" fill="#f7efd7" ry="2" />
+  </g>
+
+  <g transform="translate(-5, -10)">
+    <rect x="107" y="216" width="9" height="9" fill="#ebd79b" ry="2" />
+    <rect x="108" y="216" width="7" height="6" fill="#f7efd7" ry="2" />
+    <rect x="118" y="216" width="9" height="9" fill="#ebd79b" ry="2" />
+    <rect x="119" y="216" width="7" height="6" fill="#f7efd7" ry="2" />
+    <rect x="129" y="216" width="9" height="9" fill="#ebd79b" ry="2" />
+    <rect x="130" y="216" width="7" height="6" fill="#f7efd7" ry="2" />
+    <rect x="140" y="216" width="9" height="9" fill="#ebd79b" ry="2" />
+    <rect x="141" y="216" width="7" height="6" fill="#f7efd7" ry="2" />
+    <rect x="151" y="216" width="9" height="9" fill="#ebd79b" ry="2" />
+    <rect x="152" y="216" width="7" height="6" fill="#f7efd7" ry="2" />
+    <rect x="162" y="216" width="9" height="9" fill="#ebd79b" ry="2" />
+    <rect x="163" y="216" width="7" height="6" fill="#f7efd7" ry="2" />
+    <rect x="173" y="216" width="9" height="9" fill="#ebd79b" ry="2" />
+    <rect x="174" y="216" width="7" height="6" fill="#f7efd7" ry="2" />
+    <rect x="184" y="216" width="9" height="9" fill="#ebd79b" ry="2" />
+    <rect x="185" y="216" width="7" height="6" fill="#f7efd7" ry="2" />
+    <rect x="195" y="216" width="9" height="9" fill="#ebd79b" ry="2" />
+    <rect x="196" y="216" width="7" height="6" fill="#f7efd7" ry="2" />
+  </g>
+
+  <g transform="translate(0, -23)">
+    <rect x="96" y="216" width="9" height="9" fill="#ebd79b" ry="2" />
+    <rect x="97" y="216" width="7" height="6" fill="#f7efd7" ry="2" />
+    <rect x="107" y="216" width="9" height="9" fill="#ebd79b" ry="2" />
+    <rect x="108" y="216" width="7" height="6" fill="#f7efd7" ry="2" />
+    <rect x="118" y="216" width="9" height="9" fill="#ebd79b" ry="2" />
+    <rect x="119" y="216" width="7" height="6" fill="#f7efd7" ry="2" />
+    <rect x="129" y="216" width="9" height="9" fill="#ebd79b" ry="2" />
+    <rect x="130" y="216" width="7" height="6" fill="#f7efd7" ry="2" />
+    <rect x="140" y="216" width="9" height="9" fill="#ebd79b" ry="2" />
+    <rect x="141" y="216" width="7" height="6" fill="#f7efd7" ry="2" />
+    <rect x="151" y="216" width="9" height="9" fill="#ebd79b" ry="2" />
+    <rect x="152" y="216" width="7" height="6" fill="#f7efd7" ry="2" />
+    <rect x="162" y="216" width="9" height="9" fill="#ebd79b" ry="2" />
+    <rect x="163" y="216" width="7" height="6" fill="#f7efd7" ry="2" />
+    <rect x="173" y="216" width="9" height="9" fill="#ebd79b" ry="2" />
+    <rect x="174" y="216" width="7" height="6" fill="#f7efd7" ry="2" />
+    <rect x="184" y="216" width="9" height="9" fill="#ebd79b" ry="2" />
+    <rect x="185" y="216" width="7" height="6" fill="#f7efd7" ry="2" />
+    <rect x="195" y="216" width="9" height="9" fill="#ebd79b" ry="2" />
+    <rect x="196" y="216" width="7" height="6" fill="#f7efd7" ry="2" />
+  </g>
+  </g>
+</svg>

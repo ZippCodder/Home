@@ -1,0 +1,80 @@
+  <DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <script src="https://kit.fontawesome.com/52e3142fe2.js" crossorigin="anonymous"></script>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Lobster&family=Roboto&display=swap" rel="stylesheet">
+<link rel="icon" href="/favicon.png">
+<link href="/public/styles/styles.css" rel="stylesheet">
+<link href="/public/styles/home.css" rel="stylesheet">
+    <title>Scribler</title>
+    </head>
+    <body>
+        <header>
+		<h1 class="logo" onclick="location.href='http://localhost:3000'"><i>Scribler</i></h1>
+            <div class="menu">
+		    <p id="username">{username}</p>
+            <i class="fas fa-bars" id="menu">
+		    <nav id="dropdown" class="{logged}">
+                    <a href="" id="home">Home</a>
+		    <a href="users/dashboard/docs" class="dropdown__dashboard">{dashboard}</a>
+		    <a href="" id="logout" class="dropdown__logout">{logout}</a>
+                </nav>
+            </i>
+          </div>
+        </header>
+        <main>
+            <article class="info">
+                <div class="filter">
+            <h1 class="heading">Create Something <em>Bold</em></h1>
+            <p class="intro">We provide a reliable platform for you to express your thoughts, feelings and ideas throught writing! Scribler is a cloud based service that you can use to create and save your text files all in one place! Get started by creating an account or logging into an existing account!</p>
+            <div class="buttons">
+                <button onclick="location.href='http://localhost:3000/signup'"  class="btn signup" href="signup"><p>Sign up</p></button>
+                <button onclick="location.href='http://localhost:3000/login'"  class="btn login" href="login"><p>Login</p></button>
+            </div>
+            </div>
+            </article>
+
+            <section class="quote">
+            <img src="/public/images/typewriter.svg" class="quote__graphic"></img>
+            <blockquote class="quote__text">
+             <p><i>"The most valuable of all talents is that of never using two words when one will do."</i></br></br>-Thomas Jefferson</p>
+            </blockquote>
+            </section>
+            <div class="content-container">
+            <section class="features">
+			<article class="box create">
+                    <i class="fas fa-pencil-alt"></i>
+                    <p>Let our platform be your canvas! Here you can deposit whatever you like weather its for school, work or personal use!</p>
+                </article>
+                <article class="box share">
+                    <i class="fas fa-users"></i>
+                    <p>We give you the chance to share your work and ideas with others, as well as collaborate and contribute to different projects!</p>
+                </article>
+                <article class="box express">
+                    <i class="fas fa-brain"></i>
+                    <p>Let this be the place for you to store your ideas all in one convenient and easily accessable place!</p>
+                </article>
+            </section>
+            <section class="get-started">
+             <article class="get-started__content">
+              <h2 class="content__title">Start Your Journey</h2>
+              <p class="content__paragraph">Join millions of aspiring and skillful writers, and make your mark by sharing your unique touch. Click "Get Started" below, and create your personal account today starting at no cost! We're excited to have you join our gorwing community, and to see what you can share.</p>
+             <button onclick="location.href='http://localhost:3000/signup'"  class="btn content__get-started" href="signup"><p>Get Started</p></button>
+             </article>
+            </section>
+           </div>
+        </main>
+     <footer>
+     <div class="socials">
+     <a href="" class="socials__project">By <i>Deon Rich</i></a>
+     </br>
+     <a href="https://github.com/ZippCodder?tab=repositories" target="blank" class="socials__link"><i class="fab fa-github-square"></i></a>
+     <a href="https://dev.to/zippcodder" target="blank" class="socials__link"><i class="fab fa-dev"></i></a>
+     <a href="https://codepen.io/ZippCodder" target="blank" class="socials__link"><i class="fab fa-codepen"></i></a>
+    </div>
+   </footer> 
+	<script src="app.js"></script>
+    </body>
+</html> 

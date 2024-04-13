@@ -1,0 +1,136 @@
+
+.editor {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  padding: 5%;
+  min-height: 500px;
+  grid-template-rows: 10% 90%;
+  grid-row-gap: 5vmin;
+}
+
+.title {
+  width: 100%;
+  height: 1fr;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  font-size: 1em;
+  min-height: 60px;
+  font-family: "Roboto", sans-serif;
+  max-height: 50px;
+  min-height: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.title input {
+  width: 50%;
+  height: 100%;
+  color: gray;
+  font-size: 1em;
+  padding: 2%;
+  box-shadow: inset 0px 0px 5px gray;
+  border: 1px solid #c6c6c6;
+  color: #c6c6c6;
+  border-radius: 5px;
+}
+
+.title button {
+  width: 20%;
+  height: 100%;
+  max-width: 300px;
+  min-width: 100px;
+  background: #ff3c00;
+  border: none;
+  color: white;
+  font-size: 1em;
+  font-family: "Lobster", cursive;
+}
+
+textarea {
+  width: 100%;
+  height: 1fr;
+  resize: none;
+  padding: 2%;
+  color: gray;
+  grid-row-start: 2;
+  grid-row-end: 2;
+  max-height: 800px;
+  font-size: 1em;
+  font-family: "Roboto", sans-serif;
+  box-shadow: inset 0px 0px 5px gray;
+  border: 1px solid #c6c6c6;
+  color: #c6c6c6;
+  border-radius: 5px;
+}
+
+#loader2 {
+  border-top: 5px solid rgba(0, 0, 0, 0);
+  border-bottom: 5px solid rgba(0, 0, 0, 0);
+  border-right: none;
+  animation: spin 0.8s infinite linear;
+  animation-play-state: paused;
+  border-left: 5px solid #ff3c00;
+  border-right: 5px solid #ff3c00;
+  width: 80px;
+  position: relative;
+  display: none;
+  margin: auto;
+  height: 80px;
+  border-radius: 50%;
+  margin-top: 10%; 
+}
+
+@keyframes spin {
+  0% {
+    transform: roate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Tablets */
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  .header > h1 {
+    font-size: 2em;
+  }
+  .header > h2 {
+    font-size: 1em;
+  }
+}
+
+/* Small screens and laptops */
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .header > h1 {
+    font-size: 2em;
+  }
+  .header > h2 {
+    font-size: 1em;
+  }
+}
+
+/* Desktops and large screens */
+
+@media only screen and (min-width: 1025px) and (max-width: 1200px) {
+  .header > h1 {
+    font-size: 2em;
+  }
+  .header > h2 {
+    font-size: 1em;
+  }
+}
+
+/* Extra large screens */
+
+@media only screen and (min-width: 1201px) {
+  .header > h1 {
+    font-size: 2em;
+  }
+  .header > h2 {
+    font-size: 1em;
+  }
+}
