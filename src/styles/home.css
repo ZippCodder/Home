@@ -9,7 +9,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  min-height: 100vh;
+  height: min-content; 
 }
 
 .heading {
@@ -56,6 +56,7 @@
 
 .quote {
   margin: 2em;
+  width: 90%; 
   display: block;
   padding-top: 10%;
   padding-bottom: 10%;
@@ -64,6 +65,8 @@
   text-align: center;
   margin: auto;
   background: radial-gradient(#c6c6c6, white, white);
+  border-top: 4px solid #c6c6c6;
+  border-bottom: 4px solid #c6c6c6;
 }
 
 .quote__text {
@@ -122,6 +125,11 @@
  color: gray; 
 }
 
+.content-container {
+ padding-top: 1em; 
+ padding-bottom: 1em; 
+}
+
 .content__title {
  font-size: 2em;
  color: gray;  
@@ -130,7 +138,6 @@
 
 .content__paragraph {
  margin-top: 3em; 
- font-size: 80%; 
 }
 
 .content__get-started {
@@ -150,8 +157,8 @@
   min-height: 100%;
   display: flex;
   flex-direction: column; 
-  padding-bottom: 10%;
-  padding-top: 10%;
+  padding-bottom: 20vmin;
+  padding-top: 30vmin;
   padding-left: 10%; 
   padding-right: 10%; 
   justify-content: center;
@@ -262,8 +269,6 @@
   .quote {
     padding-top: 5%; 
     padding-bottom: 5%;     
-    width: 90%; 
-    border-bottom: 4px solid #c6c6c6;
   }
 }
 

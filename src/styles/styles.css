@@ -126,7 +126,7 @@ button, #menu, .logo {
 
 footer {
   width: 100%;
-  height: calc(20% - 4em);
+  height: 20vh;
   position: relative;
   min-height: 50px;
   top: 20%;
