@@ -20,15 +20,7 @@ function render(arr) {
     document.getElementById("totalDocs").innerText = arr.length;
     let documentsContainer = document.querySelector(".dashboard__documents");
     document.querySelector(".dashboard__empty-message").style.display = "none";
-    documentsContainer.style.display = "grid";
-    documentsContainer.style.justifyContent = "center";
-    documentsContainer.style.paddingLeft = "5%";
-    documentsContainer.style.paddingRight = "5%";
-    documentsContainer.style.gridTemplateColumns =
-        "repeat(auto-fill,minmax(200px,1fr))";
-    documentsContainer.style.gridAutoRows = "200px";
-    documentsContainer.style.paddingTop = "5%";
-    documentsContainer.style.gridGap = "5vmin";
+    documentsContainer.setAttribute("class", "dashboard__documents dashboard__documents--full");
 
     for (let i of arr) {
         let doc = document.createElement("div");
@@ -133,19 +125,7 @@ function render(arr) {
                 document.querySelector("#totalDocs").innerText = "";
 
                 let dashboard = document.querySelector(".dashboard__documents");
-                documentsContainer.style.minHeight = "calc(90% + 200px)";
-                documentsContainer.style.display = "flex";
-                documentsContainer.style.justifyContent = "center";
-                documentsContainer.style.alignItems = "center";
-                documentsContainer.style.minWidth = "90%";
-                documentsContainer.style.paddingLeft = "0";
-                documentsContainer.style.paddingRight = "0";
-                documentsContainer.style.gridTemplateColumns = "none";
-                documentsContainer.style.alignItems = "center";
-                documentsContainer.style.paddingTop = "0";
-                documentsContainer.style.gridGap = "0";
-                documentsContainer.style.flexDirection = "column";
-                documentsContainer.style.paddingBottom = "10%";
+                dashboard.setAttribute("class", "dashboard__documents dashboard__documents--empty");
 
                 document.querySelector(".dashboard__empty-message").style.display = "initial";
                 document.querySelector(".dashboard__empty-message").style.top = "0";

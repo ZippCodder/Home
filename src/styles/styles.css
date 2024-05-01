@@ -3,6 +3,7 @@ html,
 body {
   height: 100%;
   width: 100%;
+  min-width: 300px; 
   display: block; 
   background-color: white;
   font-size: 1em;
@@ -85,7 +86,17 @@ button, #menu, .logo {
  cursor: pointer; 
 }
 
+button {
+ max-width: 15em; 
+}
+
 .logo {
+  color: white;
+  font-size: 2em;
+  font-family: "Lobster", cursive;
+}
+
+.header__logo h1 {
   color: white;
   font-size: 2em;
   font-family: "Lobster", cursive;
@@ -126,10 +137,9 @@ button, #menu, .logo {
 
 footer {
   width: 100%;
-  height: 20vh;
+  height: 12rem;
   position: relative;
   min-height: 50px;
-  top: 20%;
   text-align: center;
   background-color: #333333;
   display: flex; 
@@ -137,7 +147,7 @@ footer {
   justify-content: center; 
   padding-top: 2em; 
   padding-bottom: 2em;
-  box-sizing: content-box;  
+  box-sizing: border-box;  
 }
 
 .socials {
@@ -211,10 +221,10 @@ footer {
   grid-template-rows: 20% 20% 20%;
 }
 
-nav a {
+#dropdown a {
   text-align: center;
   height: 2em;
-  line-height: 2em;  
+  line-height: 2em; 
   width: 50%;
   margin: auto;
   text-decoration: none;
@@ -228,10 +238,6 @@ nav a {
   transition: border-left-color 0.5s ease; 
 }
 
-@media only screen and (min-width: 2500px) {
-  body {
-   box-sizing: border-box; 
-   padding-left: 30%; 
-   padding-right: 30%; 
-  }
+#dropdown[class="logged-out"] .dropdown__dashboard, #dropdown[class="logged-out"] .dropdown__logout {
+ display: none; 
 }

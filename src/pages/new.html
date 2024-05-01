@@ -19,8 +19,11 @@
 		    <p id="username" data-username="{username}">{username}</p>
             <i class="fas fa-bars" id="menu">
                 <nav id="dropdown">
-            <a href="" id="home">Home</a>
-            <a href="users/dashboard/docs" class="dropdown__dashboard">Dashboard</a>
+                    <a href="/">Home</a>
+		    <a href="users/dashboard/docs" class="dropdown__dashboard">Dashboard</a>
+                    <a href="/signup">Signup</a>
+                    <a href="/login">Login</a>
+		    <a href="" id="logout" class="dropdown__logout">Logout</a>
                 </nav>
             </i>
             </div>
@@ -46,9 +49,9 @@
                     </div>
                <div class="editor">
                 <div class="title">
-                <input type="text" placeholder="Untitled..." id="title" maxLength="50"><button id="save" class="btn"><p>Save</p></button>
+                <input type="text" placeholder="Untitled Document" id="title" maxLength="50"><button id="save" class="btn"><p>Save</p></button>
                 </div>
-               <textarea id="main"></textarea>
+               <textarea id="main" placeholder="..."></textarea>
               </div>
 	       <div id="loader2">
 	       </div>

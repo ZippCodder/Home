@@ -13,14 +13,20 @@
     <body>
         <header>
 		<h1 class="logo" onclick="location.href='http://localhost:3000'"><i>Scribler</i></h1>
+            <nav class="main-nav">
+               <a href="/">Home</a>
+               <a href="/signup">Signup</a>
+               <a href="/login">Login</a>
+	       <a href="/contact">Contact</a>
+            </nav>
             <div class="menu">
 		    <p id="username">{username}</p>
             <i class="fas fa-bars" id="menu">
 		    <nav id="dropdown" class="{logged}">
                     <a href="/">Home</a>
+		    <a href="users/dashboard/docs" class="dropdown__dashboard">{dashboard}</a>
                     <a href="/signup">Signup</a>
                     <a href="/login">Login</a>
-		    <a href="users/dashboard/docs" class="dropdown__dashboard">{dashboard}</a>
 		    <a href="" id="logout" class="dropdown__logout">{logout}</a>
                 </nav>
             </i>
@@ -37,6 +43,7 @@
             </div>
             </div>
             </article>
+            <div class="main-content">
             <div class="content-container">
             <section class="features">
 			<article class="box create">
@@ -66,6 +73,7 @@
              <p><i>"The most valuable of all talents is that of never using two words when one will do."</i></br></br>-Thomas Jefferson</p>
             </blockquote>
             </section>
+          </div>
         </main>
      <footer>
      <div class="socials">

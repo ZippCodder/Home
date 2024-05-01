@@ -13,6 +13,31 @@ header {
   color: #ff3c00;
 }
 
+.dashboard__documents--full {
+ display: grid;
+ justify-content: center;  
+ width: 100%; 
+ padding-left: 5%; 
+ padding-right: 5%;
+ grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+ grid-auto-rows: 200px;
+ padding-top: 5%;
+ grid-gap: min(2em, 5vmin);  
+}
+
+.dashboard__documents--empty {
+ min-height: calc(90% + 200px); 
+ display: flex; 
+ justify-content: center;
+ align-items: center; 
+ min-width: 90%;
+ grid-template-columns: none;
+ padding-top: 0; 
+ grid-gap: 0;
+ flex-direction: column; 
+ padding-bottom: 10%; 
+}
+
 .menu i::after {
   position: absolute;
   color: white;
@@ -67,19 +92,21 @@ button {
 }
 
 .dashboard {
-  min-height: 80vh;
+  min-height: 90vh;
   width: 100%;
+  padding-bottom: 2em; 
   position: relative;
   display: block;
   background: white;
-  padding-bottom: 10%;
   background: radial-gradient(white, #f2f2f2);
 }
 
 .board {
   position: relative;
   width: 100%;
-  height: 10vmin;
+  height: 10vh;
+  min-height: 3em; 
+  max-height: 4em; 
   background: yellow;
   display: flex;
   align-items: center;
@@ -87,7 +114,6 @@ button {
   font-family: "Roboto", sans-serif;
   justify-content: center;
   background: white;
-  min-height: 30px;
   border-bottom: 2px solid #c6c6c6;
   box-shadow: 0px 0px 10px black;
   z-index: 2; 
@@ -125,7 +151,6 @@ button {
   position: relative;
   margin: auto;
   text-align: center;
-  /* new */
   height: 350px;
   line-height: 350px;
 }
@@ -191,11 +216,14 @@ button {
   height: auto;
   display: flex;
   flex-direction: row;
+  align-items: center; 
   justify-content: space-between;
   padding-top: 5%;
+  padding-bottom: 1em; 
   padding-left: 5%; 
   padding-right: 5%; 
-  border-bottom: 1px solid #e1e1e1;
+  border-bottom: 1px solid #c6c6c6;
+  background: #e6e6e6; 
 }
 
 #preview,
@@ -337,7 +365,38 @@ button {
 
 /* Desktops and large screens */
 
-@media only screen and (min-width: 1025px) and (max-width: 1200px) {
+@media only screen and (min-width: 1025px) {
+ .board {
+  padding-left: 15%;
+  padding-right: 15%; 
+ }
+
+ .dashboard__documents {
+  padding-left: 15%;
+  padding-right: 15%; 
+ }
+
+ .dashboard__heading {
+  padding-left: 15%; 
+  padding-right: 15%; 
+ }
+}
+
+@media only screen and (min-width: 1800px) {
+ .dashboard__heading {
+  padding-left: 30%; 
+  padding-right: 30%; 
+ }
+
+ .dashboard__documents {
+  padding-left: 30%; 
+  padding-right: 30%; 
+ }
+
+ .board {
+  padding-left: 30%;
+  padding-right: 30%; 
+ }
 }
 
 /* Extra large screens */
