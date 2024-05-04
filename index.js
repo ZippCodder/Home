@@ -10,6 +10,7 @@ const util = require("util");
 const debug = util.debuglog;
 const handlers = require("./lib/handlers");
 const uri = process.env.MONGO_URI;
+const port = process.env.PORT;
 
 // Starting server...
 
@@ -78,7 +79,7 @@ server.on("request", (req,res) => {
 
 // Listen on port 3000...
 
-server.listen(3000, () => {
+server.listen(port, () => {
     console.log("Server is listening...");
 })
 
