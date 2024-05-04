@@ -1,5 +1,7 @@
+import "../styles/recent.css";
+import "../styles/docs.css";
 
-const cont = document.querySelector(".dashboard");
+const cont = document.querySelector(".dashboard__activity");
 
 if (activity.length > 0) {
     document.querySelector(".dashboard__empty-message").style.display = "none";

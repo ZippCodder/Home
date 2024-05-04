@@ -1,8 +1,12 @@
 
+import "../styles/styles.css"; 
+import "../styles/friends.css";
+import "../styles/docs.css";
+
  const username = document.getElementById("username").getAttribute("data-username");
 
  let select = document.querySelector("#share").getElementsByTagName("select")[0];
- for (i of userData.documents) {
+ for (let i of userData.documents) {
      let option = document.createElement("option");
      option.innerHTML = i.title;
      option.setAttribute("data-id", i._id);
@@ -185,6 +189,12 @@
          })
      })
  }
+
+ document.querySelector(".hide-share").onclick = hideShare;
+ document.querySelector(".show-request").onclick = showRequest;
+ document.querySelectorAll(".hide-request").forEach(v => {
+   v.onclick = hideRequest;
+ });
 
  document.querySelector("#submit").addEventListener("click", () => {
      sendRequest(username, document.querySelector("#user-search").value);

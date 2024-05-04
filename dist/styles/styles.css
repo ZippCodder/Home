@@ -12,7 +12,9 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    user-select: none;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+            user-select: none;
 }
 
 header {
@@ -201,6 +203,7 @@ footer {
     box-sizing: content-box;
     padding-top: 25px;
     padding-bottom: 25px;
+    height: -moz-min-content;
     height: min-content;
     display: none;
     top: 1.5em;
@@ -231,7 +234,9 @@ footer {
     margin: auto;
     text-decoration: none;
     color: white;
-    user-select: none;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+            user-select: none;
     font-family: "Roboto", sans-serif;
     display: block;
     font-size: 50%;

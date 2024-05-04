@@ -22,6 +22,7 @@ footer {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
+    height: -moz-min-content;
     height: min-content;
 }
 
@@ -40,7 +41,9 @@ footer {
 
 .main-nav a {
     color: white;
-    user-select: none;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+            user-select: none;
     font-family: "Roboto", sans-serif;
     text-decoration: none;
     font-size: 80%;
@@ -53,6 +56,7 @@ footer {
 }
 
 .buttons {
+    height: -moz-min-content;
     height: min-content;
     min-height: 40px;
     width: auto;
@@ -138,6 +142,7 @@ footer {
     margin: 2em;
     align-items: center;
     justify-items: center;
+    height: -moz-min-content;
     height: min-content;
     padding-top: 10%;
     padding-bottom: 10%;
@@ -176,6 +181,7 @@ footer {
     text-align: center;
     color: white;
     overflow: hidden;
+    height: -moz-max-content;
     height: max-content;
     min-height: 100%;
     display: flex;

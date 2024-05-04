@@ -1,3 +1,7 @@
+import "../styles/styles.css";
+import "../styles/new.css";
+import "../styles/docs.css";
+
 let save = document.getElementById("save");
 let title = document.getElementById("title");
 let main = document.getElementById("main");

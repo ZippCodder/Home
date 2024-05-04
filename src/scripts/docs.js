@@ -1,5 +1,8 @@
 // Retreive users documents...
 
+import "../styles/styles.css";
+import "../styles/docs.css";
+
 var documents = {};
 const username = document.getElementById("username").getAttribute("data-username");
 const documentMessage = document.querySelector(".dashboard__empty-message > p");
@@ -61,11 +64,15 @@ function render(arr) {
                             title: document.querySelector("#edit-title").value,
                             main: document.querySelector("#edit-body").value,
                         }),
+                    }).then(() => {
+                        toggleMessage("Document was successfully updated!", true);
+                    }).catch(err => {
+                        console.log(err);
                     });
                 };
                 edit(docObj.title, docObj.body, doc);
             } else {
-               toggleMessage("You don't have permission to edit this document!", false);
+                toggleMessage("You don't have permission to edit this document!", false);
             }
         });
         let eye = document.createElement("i");
@@ -157,6 +164,10 @@ function render(arr) {
         documentsContainer.appendChild(doc);
     }
 }
+
+document.querySelectorAll(".preview-exit").forEach(v => {
+ v.onclick = exitPreview;
+});
 
 function preview(title, body, dateMade) {
     document.body.style.overflow = "hidden";

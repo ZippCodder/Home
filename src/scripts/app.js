@@ -5,13 +5,13 @@ const dropdown = document.getElementById("dropdown");
 const message = document.querySelector("#message");
 const logout = document.getElementById("logout");
 
-window.toggleMessage = function(content, positive=true) {
- message.innerText = content; 
- message.setAttribute("class",(positive) ? "message--positive":"message--negative");
- message.style.display = "block"; 
- setTimeout(() => {
-  message.style.display = "none";
- },10000);
+window.toggleMessage = function(content, positive = true) {
+    message.innerText = content;
+    message.setAttribute("class", (positive) ? "message--positive" : "message--negative");
+    message.style.display = "block";
+    setTimeout(() => {
+        message.style.display = "none";
+    }, 10000);
 }
 
 dropdown.style.display = "none";
@@ -30,8 +30,7 @@ menu.onclick = () => {
 
 
 if (logout) logout.addEventListener("click", (e) => {
-  e.preventDefault();
-  document.cookie = "sessionId= ; expires=Jan, 18 Dec 2003 12:00:00 UTC";
-  document.location = "http://localhost:3000/";
+    e.preventDefault();
+    document.cookie = "sessionId= ; expires=Jan, 18 Dec 2003 12:00:00 UTC";
+    document.location = "http://localhost:3000/users/logout";
 });
-

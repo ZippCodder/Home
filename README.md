@@ -1,9 +1,18 @@
-# Scribler - Writing Platform 
+# Scribler - Writing Platform
 
-Sca simple writers application witch allows you to create, share and collaborate on written documents.
-Users can share their documents with others, making our this platform useful for collaboration between writers, students, 
-and friends. 
+A simple writers application which allows you to create, save, share and collaborate on written documents.
 
-Note that Scribler is a dynamic application. Pages for this application can be found in the "docs" folder on the master branch as well as inside the "pages" folder. Scripts for scribler can also be found in the "lib" folder, with the entry file being "index.js". 
+## Features
+- Creation, deletion and editing or personal documents 
+- Reponsive and design for mobile and desktop devices
+- Account creation and login
+- Sending and receiving of friend requests
+- Sharing of personal documents with other users with control of editing access 
 
-Also note that the design for Scribler is mobile-only, and has not yet been optimized for large screens.
+## Built With 
+* HTML, CSS and Javascript
+* NodeJS 
+* MongoDB
+* PostCSS
+* Babel
+* Webpack
