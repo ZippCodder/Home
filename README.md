@@ -1,6 +1,6 @@
 # Scribler - Writing Platform
 
-A simple writers application which allows you to create, save, share and collaborate on written documents.
+A simple writers application which allows users to create, share and collaborate on written documents.
 
 ## Features
 - Creation, deletion and editing or personal documents 
