@@ -7,7 +7,7 @@ var documents = {};
 const username = document.getElementById("username").getAttribute("data-username");
 const documentMessage = document.querySelector(".dashboard__empty-message > p");
 
-fetch("http://localhost:3000/docs/all")
+fetch("/docs/all")
     .then((res) => {
         return res.json();
     })
@@ -57,7 +57,7 @@ function render(arr) {
                     docObj.title = document.querySelector("#edit-title").value;
                     docObj.body = document.querySelector("#edit-body").value;
 
-                    fetch("http://localhost:3000/docs/edit", {
+                    fetch("/docs/edit", {
                         method: "POST",
                         body: JSON.stringify({
                             id: doc.getAttribute("data-id"),
@@ -95,7 +95,7 @@ function render(arr) {
             ) {
                 if (window.confirm("Delete this document?")) {
                     remove();
-                    fetch("http://localhost:3000/docs/delete", {
+                    fetch("/docs/delete", {
                         method: "POST",
                         body: JSON.stringify({
                             id: trash.parentElement.parentElement.getAttribute(
@@ -108,7 +108,7 @@ function render(arr) {
             } else {
                 if (window.confirm("Remove this document?")) {
                     remove();
-                    fetch("http://localhost:3000/docs/delete", {
+                    fetch("/docs/delete", {
                         method: "POST",
                         body: JSON.stringify({
                             username: username,

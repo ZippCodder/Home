@@ -28,9 +28,12 @@ menu.onclick = () => {
     }
 }
 
+document.querySelector(".logo").onclick = function() {
+ document.location = location.origin + "/";
+};
 
 if (logout) logout.addEventListener("click", (e) => {
     e.preventDefault();
     document.cookie = "sessionId= ; expires=Jan, 18 Dec 2003 12:00:00 UTC";
-    document.location = "http://localhost:3000/users/logout";
+    document.location = location.origin + "/users/logout";
 });

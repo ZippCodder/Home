@@ -79,7 +79,7 @@ import "../styles/docs.css";
 
      toggleMessage("Document successfully shared!");
 
-     fetch("http://localhost:3000/users/share", {
+     fetch("/users/share", {
          method: "POST",
          body: JSON.stringify({
              from: from,
@@ -134,7 +134,7 @@ import "../styles/docs.css";
  }
 
  function acceptRequest(username, from) {
-     fetch("http://localhost:3000/users/accept", {
+     fetch("/users/accept", {
          method: "POST",
          body: JSON.stringify({
              username: username,
@@ -144,7 +144,7 @@ import "../styles/docs.css";
  }
 
  function rejectRequest(username, from) {
-     fetch("http://localhost:3000/users/reject", {
+     fetch("/users/reject", {
          method: "POST",
          body: JSON.stringify({
              username: username,
@@ -155,7 +155,7 @@ import "../styles/docs.css";
 
  function sendRequest(from, to) {
      if (!userData.friends.includes(to)) {
-         fetch("http://localhost:3000/users/request", {
+         fetch("/users/request", {
              method: "POST",
              body: JSON.stringify({
                  from: from,
@@ -181,7 +181,7 @@ import "../styles/docs.css";
  }
 
  function removeFriend(username, friend) {
-     fetch("http://localhost:3000/users/remove", {
+     fetch("/users/remove", {
          method: "POST",
          body: JSON.stringify({
              username: username,

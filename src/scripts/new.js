@@ -18,7 +18,7 @@ save.onclick = () => {
     loader2.style.display = "block";
     loader2.style.animationPlayState = "running";
 
-    fetch("http://localhost:3000/docs/create", {
+    fetch("/docs/create", {
         method: "POST",
         body: JSON.stringify({
             username: username,
