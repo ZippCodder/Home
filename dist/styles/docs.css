@@ -130,6 +130,9 @@ button {
     margin-right: max(5%, 1em);
     text-align: center;
     white-space: nowrap;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+            user-select: none; 
 }
 
 .tab a {

@@ -207,6 +207,18 @@
     opacity: 0.5;
 }
 
+#submit {
+ white-space: nowrap; 
+ width: max-content;
+ padding-left: 0.4em; 
+ padding-right: 0.4em;
+}
+
+#submit::after {
+ width: calc(100% + 0.8em);
+ transform: translateX(-0.4em) translateY(-100%);
+}
+
 /* Tablets */
 
 @media only screen and (min-width: 481px) and (max-width: 768px) {}

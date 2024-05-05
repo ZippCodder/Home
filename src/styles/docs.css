@@ -130,6 +130,7 @@ button {
     margin-right: max(5%, 1em);
     text-align: center;
     white-space: nowrap;
+    user-select: none; 
 }
 
 .tab a {
