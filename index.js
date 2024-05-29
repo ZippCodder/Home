@@ -5,6 +5,7 @@
 require("dotenv").config();
 
 const http = require("http");
+const https = require("https");
 const url = require("url");
 const util = require("util");
 const debug = util.debuglog;
@@ -14,7 +15,8 @@ const port = process.env.PORT;
 
 // Starting server...
 
-const server = http.createServer();
+const protocol = (process.env.MODE === "development") ? http:https;
+const server = protocol.createServer((process.env.MODE === "production") ? {key: fs.readFileSync(process.env.KEY_PATH), cert: fs.readFileSync(process.env.CERT_PATH)}:undefined);
 
 server.on("request", (req,res) => {
 
