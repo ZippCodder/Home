@@ -16,3 +16,11 @@ A simple writers application which allows users to create, share and collaborate
 * PostCSS
 * Babel
 * Webpack
+
+## Dummy accounts for testing 
+
+Username: Yamm
+Password: yammyamm
+
+Username: Dave
+Password: davedave
